@@ -1,11 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Thiệp mời thôi nôi</title>
+
+  <meta property="og:title" content="Tiệc thôi nôi" />
+  <meta property="og:description" content="21.11.2026" />
+
+  <meta property="og:image" content="" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="400" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="dist/style.css">
 </head>
-<body>
-    
+
+<body class="">
+
+  <!-- ============ INTRO: CUỘN GIẤY MỞ DỌC ============ -->
+  <div class="intro" id="intro">
+    <button class="scroll" id="scroll" type="button" aria-label="Nhấn để mở thiệp">
+      <img class="scroll__rod scroll__rod--top" src="assets/images/cuon.png" alt="">
+      <span class="scroll__paper"></span>
+      <img class="scroll__rod scroll__rod--bottom" src="assets/images/cuon.png" alt="">
+      <span class="scroll__label" id="scrollLabel">Nhấn để mở</span>
+    </button>
+  </div>
+
+  <!-- ============ NỘI DUNG THIỆP ============ -->
+  <main class="page" id="page">
+    <!-- 1. HERO -->
+    <section class="hero">
+      <div class="chapter-img">
+        <img src="assets/images/chapter.png" alt="">
+      </div>
+
+      <div class="hero__text" data-reveal>
+        <p class="hero__quote" data-reveal>“Mọi câu chuyện đẹp đều bắt đầu từ một khoảnh khắc.”</p>
+        <p>Với gia đình QCMC (Quyền Con &amp; Meo Con), khoảnh khắc ấy là ngày Min Con đến, mang theo một thế giới mới
+          của yêu thương, hy vọng và những điều kỳ diệu.</p>
+        <p>Từ QCMC, nay câu chuyện có thêm MC — một mảnh ghép nhỏ bé, mở ra hành trình
+          mới của hai ba mẹ trẻ với biết bao bỡ ngỡ trong những lần đầu tiên: lần đầu thay tã,
+          lần đầu bế con trên tay, lần đầu loay hoay pha sữa, lần đầu vỡ òa khi thấy con biết vỗ
+          tay, lần đầu bật khóc vì con ốm, và rồi nhận ra rằng hạnh phúc đôi khi chỉ đơn giản là
+          được nhìn con lớn lên mỗi ngày.</p>
+        <p>Một năm đầu đời đã trôi qua với biết bao khoảnh khắc nhỏ bé mà quý giá. Đó không
+          chỉ là năm đầu tiên của Min Con, mà còn là năm đầu tiên QCMC học cách làm ba mẹ:
+          Cùng con lớn lên, cùng nhau trưởng thành và viết nên câu chuyện của riêng gia đình mình.</p>
+        <p>Và hôm nay, gia đình mình mong có một buổi tiệc chay nhỏ thật ấm áp, nơi những người
+          thân yêu cùng quây quần để mừng Min Con tròn một tuổi, cùng nhìn lại chương đầu
+          tiên đầy yêu thương và chào đón những chương tiếp theo trong hành trình lớn lên của con.</p>
+        <p>Bởi có những khoảnh khắc sẽ trở nên trọn vẹn hơn khi được sẻ chia <br> cùng những người mình yêu quý.</p>
+        <p>Cảm ơn anh chị đã hiện diện, để trở thành một phần trong chương đầu tiên <br> của gia đình nhỏ.</p>
+      </div>
+
+      <div class="ph--panda-hero" data-label="Gấu trúc Po (PNG nền trong)" data-reveal></div>
+    </section>
+
+    <!-- 2. ẢNH POLAROID -->
+    <section class="photo">
+      <div class="ph--photo" data-label="Ảnh gia đình"></div>
+      <img src="assets/images/shifu.png" class="ph--deco ph--shifu" data-label="Sư phụ Shifu" />
+      <p class="photo__invite" data-reveal>Thân mời quý khách đến tham dự<br>bữa tiệc chay thân mật!</p>
+    </section>
+
+    <!-- 3. THỜI GIAN -->
+    <section class="time">
+      <h2 class="title" data-reveal>THỜI GIAN</h2>
+      <p class="time__date" data-reveal>21.11.2026</p>
+      <p class="time__hour" data-reveal>18:00 - Thứ Bảy</p>
+
+      <div class="countdown" id="countdown" data-date="2026-11-21T18:00:00+07:00" data-reveal>
+        <div class="countdown__item"><b data-unit="months">00</b><span>Tháng</span></div>
+        <div class="countdown__item"><b data-unit="weeks">00</b><span>Tuần</span></div>
+        <div class="countdown__item"><b data-unit="days">00</b><span>Ngày</span></div>
+        <div class="countdown__item"><b data-unit="seconds">00</b><span>Giây</span></div>
+      </div>
+      <img src="assets/images/tiger.png" class="ph--tigress" data-label="Hổ cái" />
+    </section>
+
+    <!-- 4. DRESSCODE -->
+    <section class="dresscode">
+      <h2 class="title" data-reveal>DRESSCODE</h2>
+      <p class="dresscode__names" data-reveal>Trắng - Đen - Be - Xanh lá</p>
+      <ul class="dresscode__colors" data-reveal>
+        <li style="--c:#ffffff"></li>
+        <li style="--c:#100f0dff"></li>
+        <li style="--c:#fdeee4ff"></li>
+        <li style="--c:#2a8a4eff"></li>
+      </ul>
+    </section>
+
+    <!-- 5. CÁC HOẠT ĐỘNG -->
+    <section class="activities">
+      <img src="assets/images/activities.png" class="title-img" data-reveal alt="">
+      <ul class="activities__list">
+        <li data-reveal>
+          <div class="ph--icon">
+            <img src="assets/images/icons/ballhouse.png" alt="">
+          </div>
+          <span>Nhà banh</span>
+        </li>
+        <li data-reveal>
+          <div class="ph--icon">
+            <img src="assets/images/icons/inflatable_bouncer.png" alt="">
+          </div>
+          <span>Nhà phao</span>
+        </li>
+        <li data-reveal>
+          <div class="ph--icon">
+            <img src="assets/images/icons/photobooth.png" alt="">
+          </div>
+          <span>Photobooth</span>
+        </li>
+        <li data-reveal>
+          <div class="ph--icon">
+            <img src="assets/images/icons/ice_cream_truck.png" alt="">
+          </div>
+          <span>Xe kem</span>
+        </li>
+        <li data-reveal>
+          <div class="ph--icon">
+            <img src="assets/images/icons/claw_machine.png" alt="">
+          </div>
+          <span>Máy gắp thú</span>
+        </li>
+        <li data-reveal>
+          <div class="ph--icon">
+            <img src="assets/images/icons/throwing_darts.png" alt="">
+          </div>
+          <span>Ném phi tiêu</span>
+        </li>
+        <li data-reveal>
+          <div class="ph--icon">
+            <img src="assets/images/icons/hoopla.png" alt="">
+          </div>
+          <span>Ném vòng</span>
+        </li>
+      </ul>
+      <img src="assets/images/hero_team.png" class="ph--group" data-reveal />
+    </section>
+
+    <!-- 6. ĐỊA ĐIỂM -->
+    <section class="venue">
+      <h2 class="title" data-reveal>ĐỊA ĐIỂM</h2>
+      <img src="assets/images/white_place.png" class="venue__name" alt="">
+      <p class="venue__address" data-reveal>588 Phạm Văn Đồng, khu phố 3,<br>Hiệp Bình, TP. Hồ Chí Minh</p>
+      <img src="assets/images/map.png" class="ph--map" data-label="Bản đồ" data-reveal />
+      <a class="btn btn--small" href="https://maps.app.goo.gl/TRonHJfzZ5LXKa2N6" target="_blank" rel="noopener"
+        data-reveal>Xem bản đồ</a>
+    </section>
+
+    <!-- 7. RSVP -->
+    <section class="rsvp">
+      <h2 class="rsvp__title" data-reveal>Xác nhận tham gia</h2>
+      <form class="rsvp__form" id="rsvpForm" data-reveal>
+        <div class="rsvp__choices">
+          <button type="button" class="btn btn--fill is-active" data-attend="yes">SẼ THAM DỰ</button>
+          <button type="button" class="btn btn--line" data-attend="no">TIẾC QUÁ!<br>MÌNH KHÔNG THỂ THAM DỰ</button>
+        </div>
+        <input type="text" name="name" placeholder="Tên Khách Mời" required>
+        <input type="number" name="guests" min="0" placeholder="Số Người Đi Kèm (Không bao gồm bản thân bạn)">
+
+        <button type="submit" class="btn-submit" data-animate="fade-right" data-animate-scroll-start="top 95%">Xác
+          nhận</button>
+      </form>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="footer">
+      <p data-reveal>Thank you for being part<br>of our little one’s story.</p>
+      <img src="assets/images/panda2.png" class="ph--panda-footer" data-label="Gấu trúc (PNG)" />
+    </footer>
+
+  </main>
+
+  <!-- Nhạc nền: đặt file vào assets/audio/music.mp3 -->
+  <audio id="bgm"
+    src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/music/15.%20Panda%20Po%20-%20Hans%20Zimmer%20(Kung%20Fu%20Panda%20Soundtrack).mp3"
+    loop preload="auto"></audio>
+  <button class="music-btn" id="musicBtn" type="button" aria-label="Bật/tắt nhạc" aria-pressed="false" hidden>
+    <span class="music-btn__icon">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+        <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z" />
+      </svg>
+    </span>
+  </button>
+
+  <script src="assets/js/anime.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
