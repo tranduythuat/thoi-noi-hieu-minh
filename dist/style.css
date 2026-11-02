@@ -1,66 +1,66 @@
 @font-face {
   font-family: "Photograph-Signature";
-  src: url("../../assets/fonts/1FTV-Photograph-Signature.otf") format("truetype");
+  src: url("../assets/fonts/1FTV-Photograph-Signature.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "CrimsonTextBold";
-  src: url("../../assets/fonts/CrimsonText-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/CrimsonText-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "CrimsonTextBoldItalic";
-  src: url("../../assets/fonts/CrimsonText-BoldItalic.ttf") format("truetype");
+  src: url("../assets/fonts/CrimsonText-BoldItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "CrimsonTextItalic";
-  src: url("../../assets/fonts/CrimsonText-Italic.ttf") format("truetype");
+  src: url("../assets/fonts/CrimsonText-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "CrimsonTextRegular";
-  src: url("../../assets/fonts/CrimsonText-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/CrimsonText-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "CrimsonTextSemiBold";
-  src: url("../../assets/fonts/CrimsonText-SemiBold.ttf") format("truetype");
+  src: url("../assets/fonts/CrimsonText-SemiBold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "CrimsonTextSemiBoldItalic";
-  src: url("../../assets/fonts/CrimsonText-SemiBoldItalic.ttf") format("truetype");
+  src: url("../assets/fonts/CrimsonText-SemiBoldItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "LoraItalic";
-  src: url("../../assets/fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("../assets/fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Lora";
-  src: url("../../assets/fonts/Lora-VariableFont_wght.ttf") format("truetype");
+  src: url("../assets/fonts/Lora-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "LostType2023";
-  src: url("../../assets/fonts/LostType2023-Regular.otf") format("truetype");
+  src: url("../assets/fonts/LostType2023-Regular.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "UtmSpring";
-  src: url("../../assets/fonts/UTM-Spring.ttf") format("truetype");
+  src: url("../assets/fonts/UTM-Spring.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -153,7 +153,7 @@ img {
   width: 75%;
   flex: 1;
   margin: -5% auto;
-  background: linear-gradient(180deg, rgba(120, 90, 50, 0.22), transparent 16%, transparent 84%, rgba(120, 90, 50, 0.22)), url("../../assets/images/paper.jpg") center/cover no-repeat, #f4ecdf;
+  background: linear-gradient(180deg, rgba(120, 90, 50, 0.22), transparent 16%, transparent 84%, rgba(120, 90, 50, 0.22)), url("../assets/images/paper.jpg") center/cover no-repeat, #f4ecdf;
 }
 .scroll__label {
   position: absolute;
@@ -177,7 +177,7 @@ img {
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
-  background: url("../../assets/images/base_bg.jpg") no-repeat center/cover;
+  background: url("../assets/images/base_bg.jpg") no-repeat center/cover;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.359);
 }
 .page > section,
@@ -242,7 +242,7 @@ img {
   max-width: 454px;
   width: 100%;
   aspect-ratio: 454/382;
-  background: url("../../assets/images/panda.png") no-repeat center/contain;
+  background: url("../assets/images/panda.png") no-repeat center/contain;
   position: absolute;
   right: 0;
   bottom: -4%;
@@ -259,7 +259,7 @@ img {
   max-width: 346px;
   width: 100%;
   aspect-ratio: 346/459;
-  background: url("../../assets/images/family.jpg") no-repeat center/cover;
+  background: url("../assets/images/family.jpg") no-repeat center/cover;
   margin: 0 auto;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.359);
 }
