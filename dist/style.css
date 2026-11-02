@@ -205,7 +205,7 @@ img {
   flex-direction: column;
   position: relative;
   width: 100%;
-  aspect-ratio: 500/1000;
+  aspect-ratio: 500/1160;
 }
 .hero .chapter-img {
   transform: translateX(5%);
@@ -221,15 +221,15 @@ img {
 }
 .hero__quote {
   font-family: "Photograph-Signature", sans-serif;
-  font-size: 22px;
+  font-size: 34px;
   font-style: italic;
 }
 .hero__text {
   max-width: 454px;
   background-color: #fefbee;
   margin-top: 7%;
-  padding: 5% 7% 15%;
-  font-size: 12px;
+  padding: 5% 4% 15%;
+  font-size: 15px;
   line-height: 1.2;
   font-family: "CrimsonTextRegular", serif;
   border-radius: 40px;
@@ -645,11 +645,11 @@ img {
     max-width: 57vw;
   }
   .hero__quote {
-    font-size: 4.4vw;
+    font-size: 6.8vw;
   }
   .hero__text {
     max-width: 90.8vw;
-    font-size: 2.4vw;
+    font-size: 3vw;
     border-radius: 8vw;
   }
   .ph--panda-hero {
@@ -675,7 +675,7 @@ img {
   }
   .countdown {
     max-width: 75.2vw;
-    border-radius: 1calc 2.8vw;
+    border-radius: 2.8vw;
   }
   .countdown__item b {
     font-size: 10vw;
@@ -770,5 +770,3 @@ img {
     max-width: 29.2vw;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

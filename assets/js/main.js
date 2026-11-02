@@ -198,10 +198,81 @@
   // 5. RSVP – chọn tham dự / không tham dự
   // ---------------------------------------------------------
   const rsvpButtons = document.querySelectorAll('[data-attend]');
+  const rsvpForm = document.getElementById('rsvpForm');
+  const rsvpStatus = document.createElement('p');
+  let selectedAttendance = 'Tham dự';
+
+  rsvpStatus.className = 'rsvp__status';
+  rsvpStatus.setAttribute('aria-live', 'polite');
+  rsvpStatus.style.display = 'none';
+  rsvpForm.appendChild(rsvpStatus);
+
+  function setRsvpStatus(message, isError = false) {
+    rsvpStatus.textContent = message;
+    rsvpStatus.style.display = 'block';
+    rsvpStatus.style.color = isError ? '#b00020' : '#2d6a4f';
+  }
+
   rsvpButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
       rsvpButtons.forEach((b) => b.classList.toggle('is-active', b === btn));
-      // TODO: gửi dữ liệu form (Google Sheet / API) tại đây
+      selectedAttendance = btn.dataset.attend || 'Tham dự';
     });
+  });
+
+  rsvpForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(rsvpForm);
+    const payload = {
+      confirm: selectedAttendance,
+      name: String(formData.get('name') || '').trim(),
+      guest_number: Number(formData.get('guests') || 0),
+    };
+
+    if (!payload.name) {
+      setRsvpStatus('Vui lòng nhập tên khách mời.', true);
+      rsvpForm.querySelector('[name="name"]').focus();
+      return;
+    }
+
+    const submitBtn = rsvpForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Đang gửi...';
+
+    // Gán endpoint thật ở production, ví dụ:
+    window.RSVP_FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyDymBRLdVWpSD2ZYCoKP-wMp5zsj_-khuhz6lG-zUrzCE9EIa0EOIDnvmTScda2aeb/exec?sheet=confirm';
+    const endpoint = window.RSVP_FORM_ENDPOINT || '';
+
+    if (!endpoint) {
+      console.log('RSVP payload:', payload);
+      setRsvpStatus('Dữ liệu đã được lưu tạm trên console. Hãy cấu hình endpoint Google Sheet / API để gửi thật.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Xác nhận';
+      return;
+    }
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+
+      setRsvpStatus('Cảm ơn bạn! Thông tin đã được gửi.');
+      rsvpForm.reset();
+      selectedAttendance = 'yes';
+      rsvpButtons.forEach((b) => b.classList.toggle('is-active', b.dataset.attend === 'yes'));
+    } catch (error) {
+      console.error('RSVP submit error:', error);
+      setRsvpStatus('Gửi thất bại. Vui lòng thử lại hoặc liên hệ chủ nhà.', true);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Xác nhận';
+    }
   });
 })();
