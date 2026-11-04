@@ -256,12 +256,11 @@ img {
 }
 
 .ph--photo {
-  max-width: 346px;
+  max-width: 356px;
   width: 100%;
-  aspect-ratio: 346/459;
-  background: url("../assets/images/family.jpg") no-repeat center/cover;
+  aspect-ratio: 356/459;
+  background: url("../assets/images/family.png") no-repeat center/cover;
   margin: 0 auto;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.359);
 }
 
 .ph--shifu {
@@ -659,7 +658,7 @@ img {
     font-size: 4vw;
   }
   .ph--photo {
-    max-width: 69.2vw;
+    max-width: 71.2vw;
   }
   .ph--shifu {
     max-width: 25.8vw;
